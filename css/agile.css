@@ -185,7 +185,7 @@ header {
 
 #svgContainer {
   position: absolute;
-  top: 0;
+  top: 12px;
   width: 330px;
   margin-left: 50%;
   transform: translateX(-50%);

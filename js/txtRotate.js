@@ -161,46 +161,51 @@ function promiseSome(somethink) {
 
 //Chaining Different promises by return the new one inside inside the then of the old one
 function autoWrite() {
-promiseSome((resolve) => {
+promiseSome(resolve => {
   TxtRotate.allInstances[0].tick(true, false, () => {
-    console.log('Inside-haha00');
+    console.log("Inside-haha00");
     resolve();
-  })
-}).then(() => {
-  console.log('out-finitoFirst-runningSec...and run SliderFx.Big[0]');
-  return promiseSome((resolve) => {
-    SliderFx.smallAndBigInstances[1]._navigateSecond(0, () => {
-      console.log('Inside-BigSlider');
-      resolve();
+  });
+})
+  .then(() => {
+    console.log("out-BigSlider is finished!!");
+    return promiseSome(resolve => {
+      TxtRotate.allInstances[1].tick(true, false, () => {
+        console.log("Inside-haha11");
+        resolve();
+      });
     });
+  })
+  .then(() => {
+    console.log("out-finitoSec-runningThird...");
+    return promiseSome(resolve => {
+      TxtRotate.allInstances[2].tick(true, false, () => {
+        console.log("Inside-haha22");
+        resolve();
+      });
+    });
+  })
+  .then(() => {
+    console.log("out-finitoThird-runningFourth");
+    return promiseSome(resolve => {
+      TxtRotate.allInstances[3].tick(true, false, () => {
+        console.log("Inside-haha33");
+        resolve();
+      });
+    });
+  })
+  .then(() => {
+    console.log("out-finitoFirst-runningSec...and run SliderFx.Big[0]");
+    return promiseSome(resolve => {
+      SliderFx.smallAndBigInstances[1]._navigateSecond(0, () => {
+        console.log("Inside-BigSlider");
+        resolve();
+      });
+    });
+  })
+  .then(() => {
+    console.log("finitoAll!!!!!!!!");
   });
-}).then(() => {
-  console.log('out-BigSlider is finished!!')
-   return promiseSome((resolve) => {
-    TxtRotate.allInstances[1].tick(true, false, () => {
-      console.log('Inside-haha11');
-      resolve();
-    })
-  });
-}).then(() => {
-  console.log('out-finitoSec-runningThird...')
-  return promiseSome((resolve) => {
-    TxtRotate.allInstances[2].tick(true, false, () => {
-      console.log('Inside-haha22');
-      resolve();
-    })
-  });
-}).then(() => {
-  console.log('out-finitoThird-runningFourth')
-  return promiseSome((resolve) => {
-    TxtRotate.allInstances[3].tick(true, false, () => {
-      console.log('Inside-haha33');
-      resolve();
-    })
-  });
-}).then(() => {
-  console.log('finitoAll!!!!!!!!')
-});
 }
 
 

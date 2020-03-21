@@ -1,35 +1,15 @@
 
 // When you are scrolling down change the header shape and add some movements of the button 
 const header = document.getElementById("header");
-const svgContainer = document.getElementById("svgContainer");
 const wrapper = document.getElementById("menu-icon-wrapper");
 const dummy = document.getElementById('dummy');
 const bio_Options = document.getElementById("bioOptions"); 
 const container = document.getElementById("container"); 
+const containerBig = document.getElementById("containerBig"); 
 //Do somethink when the animation off the logo finished
-dot.addEventListener("animationend", () => { wrapper.style.display = "inline-block"; delayDoOpa(4, () => { wrapper.style.opacity = 1;}) }, false);
+dot.addEventListener("animationend", () => { wrapper.style.display = "inline-block"; delayDoOpa(0.4, () => { wrapper.style.opacity = 1;}) }, false);
 
 
-
-window.onscroll = function () {
-    scrollHeader()
-};
-
-function scrollHeader() {
-    if (document.body.scrollTop > 50 || (document.documentElement.scrollTop > 50 )) {
-      console.log(">50", document.body.scrollTop, document.documentElement.scrollTop);
-      header.className = "bar";
-      svgContainer.style.marginLeft = "-5%";
-      svgContainer.style.width = "30%";
-      wrapper.style.animation = "aliveButton 3s forwards";
-    } else if (document.body.scrollTop <= 50 || document.documentElement.scrollTop <= 50) {
-      header.className = "";
-      svgContainer.style.marginLeft = "24%";
-      svgContainer.style.width = "50%";
-      wrapper.style.transform = "";
-      wrapper.style.animation = "aliveButtonFuck 3s forwards";
-    }  
-}
 
 
 

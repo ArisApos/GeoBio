@@ -87,10 +87,11 @@
 		//We can use the forEach array methods now
 		//Make a conection with the menu
 		//BuildConnection 
+		let fistTimeFirstButton = true;
 		if (!this.isBig) {
-
 			SliderFx.dummyChildren.forEach((child, index) => {
 				child.addEventListener('click', function () {
+					console.log(child, self);
 					//Style(reset) the old clicked element
 					SliderFx.dummyChildren[self.curr].style.color = '';
 					SliderFx.dummyChildren[self.curr].className = 'menuItem';
@@ -98,6 +99,11 @@
 					this.classList.toggle("dummyActive");
 					//In relation with what button you have used-clicked, power-turn on the sliderFx
 					self._navigateSecond(index);
+					if(index === 0 && fistTimeFirstButton) { autoWrite();  fistTimeFirstButton = !fistTimeFirstButton}
+					else if(index === 0) bigBro(0);
+					if(index == 1) bigBro(1);
+					if (index == 2) bigBro(2);
+					if (index == 3) bigBro(3);
 				});
 			});
 		} else { //this._navigateSecond(0); //This is the bridge trigger for an event listener////Now we se it in auto 
