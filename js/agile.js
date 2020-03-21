@@ -5,13 +5,17 @@ const wrapper = document.getElementById("menu-icon-wrapper");
 const dummy = document.getElementById('dummy');
 const bio_Options = document.getElementById("bioOptions"); 
 const container = document.getElementById("container"); 
-const containerBig = document.getElementById("containerBig"); 
+const containerBig = document.getElementById("containerBig");
+const karditsa = document.getElementById("karditsa");
+let karditsaOneClick = true;
 //Do somethink when the animation off the logo finished
 dot.addEventListener("animationend", () => { wrapper.style.display = "inline-block"; delayDoOpa(0.4, () => { wrapper.style.opacity = 1;}) }, false);
 
 
-
-
+// Karditsa button functionality
+ karditsa.addEventListener("click", function() {
+     if (karditsaOneClick){ insider(); karditsaOneClick = !karditsaOneClick; } 
+});
 
 //------------------>>>>For the auto initMap function
 var map, overlay, deletions;

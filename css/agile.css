@@ -19,6 +19,20 @@ header {
   top: 0;
   left: 0;
 }
+#karditsa {
+  background: #1099ff;
+  color: white;
+  position: absolute;
+  top: 150px;
+  right: 100px;
+  padding: 4px;
+  border-radius: 6px;
+  z-index: 100;
+  cursor: pointer;
+}
+#karditsa:hover {
+  background: #00d9ef;
+}
 
 #bioOptions {
   position: absolute;
