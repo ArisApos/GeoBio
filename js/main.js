@@ -86,16 +86,12 @@
 			dummy.className = "dummy dummy--active";
 			bio_Options.style.display = 'none';
 			container.style.display = 'unset';
-			changeOpacity();
-
 		} else {
 			outAC(segmentA);
 			outB(segmentB);
 			outAC(segmentC);
 			dummy.className = "dummy";
 			container.style.display = "none";
-			changeOpacity();
-
 		}
 		toCloseIcon = !toCloseIcon;
 	};

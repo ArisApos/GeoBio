@@ -13,7 +13,7 @@ header {
   transition: clip-path 0.7s, height 1s;
   background: linear-gradient(to right, #004fb8 0%, #009bd8 100%);
   clip-path: polygon(0% 0%, 100% 0em, 100% calc(65%), 0% 100%);
-  height: 100px;
+  height: 114px;
   width: 100%;
   position: fixed;
   top: 0;
