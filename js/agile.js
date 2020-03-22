@@ -8,6 +8,13 @@ const container = document.getElementById("container");
 const containerBig = document.getElementById("containerBig");
 const karditsa = document.getElementById("karditsa");
 let karditsaOneClick = true;
+const menuItems = [].slice.call(document.getElementsByClassName("menu-item"))
+console.log(menuItems);
+
+
+menuItems.forEach(menuItem => {
+  console.log(menuItem)
+});
 //Do somethink when the animation off the logo finished
 dot.addEventListener("animationend", () => { wrapper.style.display = "inline-block"; delayDoOpa(0.4, () => { wrapper.style.opacity = 1;}) }, false);
 
@@ -69,7 +76,7 @@ function initMap() {
 
 
 
-      //Problemmm!!! Doesnt work and i dont know why---But now i know because the googleMaps API is litle tricky
+      //Problemmm!!! Doesnt work and i dont know why---But now i know because the googleMaps API is little bit tricky
         // console.log(deletions.length);
         // var first = true;
 

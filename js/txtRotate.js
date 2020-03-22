@@ -161,6 +161,7 @@ function promiseSome(somethink) {
 
 //Chaining Different promises by return the new one inside inside the then of the old one
 function autoWrite() {
+  
 promiseSome(resolve => {
   TxtRotate.allInstances[0].tick(true, false, () => {
     console.log("Inside-haha00");
