@@ -1,0 +1,19 @@
+{
+  "name": "geobio",
+  "version": "1.0.0",
+  "description": "My profile in a creative way of presentation dedicated to my lovely Agile Actors",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArisApos/GeoBio.git"
+  },
+  "author": "Aris Apostoloy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArisApos/GeoBio/issues"
+  },
+  "homepage": "https://github.com/ArisApos/GeoBio#readme"
+}
