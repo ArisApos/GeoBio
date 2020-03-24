@@ -23,12 +23,14 @@ header {
   background: #1099ff;
   color: white;
   position: absolute;
-  top: 150px;
-  right: 100px;
+  top: 136px;
+  right: 160px;
   padding: 4px;
   border-radius: 6px;
   z-index: 100;
   cursor: pointer;
+  transition: 3s;
+  opacity: 0;
 }
 #karditsa:hover {
   background: #00d9ef;
@@ -268,35 +270,35 @@ g:hover .st2 {
 
 #first-a {
   transform-origin: 41% 57.5%;
-  animation: animAgile1 2s cubic-bezier(0, 0.23, 1, .1);
+  animation: animAgile1 4s cubic-bezier(0, 0.23, 1, .1);
 }
 
 #second-a {
   transform-origin: 69% 7.5%;
-  animation: animAgile1_1 2s cubic-bezier(0, 0.23, 1, .1);
+  animation: animAgile1_1 4s cubic-bezier(0, 0.23, 1, .1);
 }
 
 #second {
   animation-name: animAgile1_2;
-  animation-duration: 3s;
+  animation-duration: 6s;
   animation-fill-mode: forwards;
   transform-origin: 12% 68%;
 }
 
 #third {
   animation-name: animAgile1_3;
-  animation-duration: 3s;
+  animation-duration: 6s;
   animation-fill-mode: forwards;
   transform-origin: 23% 68.7%;
 }
 
 /** Dot Animation **/
 #dot {
-  transition: fill 3s;
+  transition: fill 6s;
   transform-origin: 23.6% 17.5%;
   animation-name: animAgile2;
   animation-duration: 1s;
-  animation-delay: 2s;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
   d: path('M 254 118.6 c 8.5 0 15.4 6.9 15.4 15.4 s -6.9 15.4 -15.4 15.4 s -15.4 -6.9 -15.4 -15.4 S 245.5 118.6 254 118.6 Z');
   transform: translate(0px, -120%);
@@ -304,7 +306,7 @@ g:hover .st2 {
 
 .bar {
   clip-path: polygon(0% 0%, 100% 0em, 100% calc(100%), 0% 100%);
-  height: 8vh;
+
   clip-path: none;
 }
 
@@ -332,8 +334,9 @@ g:hover .st2 {
   background-color: #0084ce;
   border-radius: 24%;
   mix-blend-mode: hard-light;
-top: 29%;
-left: 72%;
+  top: 182px;
+  right: 47px;
+  position: absolute !important;
   box-shadow: 0px 3px 25px 6px #00000070;
   border-width: 2px;
   border-color: #0061b6;

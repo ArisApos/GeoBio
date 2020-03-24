@@ -8,15 +8,17 @@ const container = document.getElementById("container");
 const containerBig = document.getElementById("containerBig");
 const karditsa = document.getElementById("karditsa");
 let karditsaOneClick = true;
-const menuItems = [].slice.call(document.getElementsByClassName("menu-item"))
-console.log(menuItems);
 
-
-menuItems.forEach(menuItem => {
-  console.log(menuItem)
-});
 //Do somethink when the animation off the logo finished
-dot.addEventListener("animationend", () => { wrapper.style.display = "inline-block"; delayDoOpa(0.4, () => { wrapper.style.opacity = 1;}) }, false);
+dot.addEventListener("animationend", () => {
+     wrapper.style.display = "inline-block";
+      delayDoOpa(0.4, () => {
+           wrapper.style.opacity = 1;
+           mapDocElement.style.transition = "3s";
+           karditsa.style.opacity = 1;
+           changeOpacity();
+        }) 
+    }, false);
 
 
 // Karditsa button functionality
@@ -28,13 +30,12 @@ dot.addEventListener("animationend", () => { wrapper.style.display = "inline-blo
 var map, overlay, deletions;
 const mapDocElement = document.getElementById("map");
 
+
 function initMap() {
     //Soft display.. We substitute this three statements with the last
-    //  mapDocElement.style.transition = 'none';
-    //  mapDocElement.style.opacity = 0;
-    //  opacityActive = !opacityActive;
-    changeOpacity(true);
-
+     mapDocElement.style.transition = 'none';
+     mapDocElement.style.opacity = 0;
+     opacityActive = !opacityActive;
     var locationKarditsa = {
         lat: 39.3651987,
         lng: 21.9276915
@@ -70,7 +71,6 @@ function initMap() {
         firstMapChild.style.height = '110%';
         delayDoOpa(500, () => {
             mapDocElement.style.visibility = 'visible';
-            changeOpacity();
             // insider();//-------------------------------------------------------------------->>GoPoint
         });
 
@@ -299,7 +299,7 @@ var changeOpacity = function (withoutTransition = false) {
 }
 //AutoZoom asset
 function insider(times = 15, zoom = 2) {
-    delayDoOpa(1000, () => {
+    delayDoOpa(500, () => {
         map.setZoom(zoom);
         if (times > 0) insider(times - 1, zoom + 1);
         else {

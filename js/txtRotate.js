@@ -206,6 +206,9 @@ promiseSome(resolve => {
   })
   .then(() => {
     console.log("finitoAll!!!!!!!!");
+    SliderFx.dummyChildren.forEach(menuItem => {
+      menuItem.style.pointerEvents = "auto";
+    });
   });
 }
 

@@ -99,7 +99,14 @@
 					this.classList.toggle("dummyActive");
 					//In relation with what button you have used-clicked, power-turn on the sliderFx
 					self._navigateSecond(index);
-					if(index === 0 && fistTimeFirstButton) { autoWrite();  fistTimeFirstButton = !fistTimeFirstButton}
+					if(index === 0 && fistTimeFirstButton) {
+						SliderFx.dummyChildren.forEach(menuItem => {
+							menuItem.style.pointerEvents = 'none';
+						});
+						 autoWrite();
+						 fistTimeFirstButton = !fistTimeFirstButton;
+
+						}
 					else if(index === 0) bigBro(0);
 					if(index == 1) bigBro(1);
 					if (index == 2) bigBro(2);
